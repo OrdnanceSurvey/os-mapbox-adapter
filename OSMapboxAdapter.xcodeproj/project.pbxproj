@@ -20,6 +20,8 @@
 		4539ECAB1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECAA1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift */; };
 		4539ECAD1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */; };
 		4539ECAF1CD8A56000FB7BC3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */; };
+		4539ECB11CD8AB2500FB7BC3 /* OSMapProducts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4539ECB01CD8AB2500FB7BC3 /* OSMapProducts.framework */; };
+		4539ECB31CD8B21F00FB7BC3 /* OSMapsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECB21CD8B21F00FB7BC3 /* OSMapsAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		4539ECAA1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsStyleProtocol.swift; sourceTree = "<group>"; };
 		4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsStyleProtocolTests.swift; sourceTree = "<group>"; };
 		4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		4539ECB01CD8AB2500FB7BC3 /* OSMapProducts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSMapProducts.framework; path = Carthage/Build/iOS/OSMapProducts.framework; sourceTree = SOURCE_ROOT; };
+		4539ECB21CD8B21F00FB7BC3 /* OSMapsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4539ECB11CD8AB2500FB7BC3 /* OSMapProducts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,7 @@
 		4539EC921CD8A39B00FB7BC3 /* OSMapboxAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				4539ECB01CD8AB2500FB7BC3 /* OSMapProducts.framework */,
 				4539ECA81CD8A3BA00FB7BC3 /* OSMapsAPI.swift */,
 				4539EC931CD8A39B00FB7BC3 /* OSMapboxAdapter.h */,
 				4539EC951CD8A39B00FB7BC3 /* Info.plist */,
@@ -145,6 +151,7 @@
 				4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */,
 				4539ECA11CD8A39B00FB7BC3 /* Info.plist */,
 				4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */,
+				4539ECB21CD8B21F00FB7BC3 /* OSMapsAPITests.swift */,
 			);
 			path = OSMapboxAdapterTests;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4539ECAD1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift in Sources */,
+				4539ECB31CD8B21F00FB7BC3 /* OSMapsAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +472,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSMapboxAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -486,6 +498,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSMapboxAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
