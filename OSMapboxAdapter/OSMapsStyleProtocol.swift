@@ -8,6 +8,13 @@
 
 import Foundation
 
+/// URL protocol used to return stylesheets that can be used with Mapbox
 class OSMapsStyleProtocol: NSURLProtocol {
     
+    override class func canInitWithRequest(request: NSURLRequest) -> Bool {
+        guard let url = request.URL else {
+            return false
+        }
+        return url.scheme == "osmaps"
+    }
 }

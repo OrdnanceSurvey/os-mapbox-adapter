@@ -26,9 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4539EC991CD8A39B00FB7BC3"
+               BuildableName = "OSMapboxAdapterTests.xctest"
+               BlueprintName = "OSMapboxAdapterTests"
+               ReferencedContainer = "container:OSMapboxAdapter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4539EC901CD8A39B00FB7BC3"
+            BuildableName = "OSMapboxAdapter.framework"
+            BlueprintName = "OSMapboxAdapter"
+            ReferencedContainer = "container:OSMapboxAdapter.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
