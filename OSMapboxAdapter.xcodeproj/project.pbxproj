@@ -19,6 +19,7 @@
 		4539ECA91CD8A3BA00FB7BC3 /* OSMapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECA81CD8A3BA00FB7BC3 /* OSMapsAPI.swift */; };
 		4539ECAB1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECAA1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift */; };
 		4539ECAD1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */; };
+		4539ECAF1CD8A56000FB7BC3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		4539ECA81CD8A3BA00FB7BC3 /* OSMapsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsAPI.swift; sourceTree = "<group>"; };
 		4539ECAA1CD8A40900FB7BC3 /* OSMapsStyleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsStyleProtocol.swift; sourceTree = "<group>"; };
 		4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSMapsStyleProtocolTests.swift; sourceTree = "<group>"; };
+		4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4539EC9B1CD8A39B00FB7BC3 /* OSMapboxAdapter.framework in Frameworks */,
+				4539ECAF1CD8A56000FB7BC3 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +142,7 @@
 		4539EC9E1CD8A39B00FB7BC3 /* OSMapboxAdapterTests */ = {
 			isa = PBXGroup;
 			children = (
+				4539ECAE1CD8A56000FB7BC3 /* Nimble.framework */,
 				4539ECA11CD8A39B00FB7BC3 /* Info.plist */,
 				4539ECAC1CD8A43500FB7BC3 /* OSMapsStyleProtocolTests.swift */,
 			);
@@ -498,8 +502,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSMapboxAdapterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSMapboxAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -510,8 +518,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OSMapboxAdapterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.os.OSMapboxAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
