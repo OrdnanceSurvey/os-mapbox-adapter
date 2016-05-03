@@ -1,0 +1,5 @@
+disabled_rules:
+  - line_length
+  - nesting
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Carthage
