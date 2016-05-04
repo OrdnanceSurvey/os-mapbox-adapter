@@ -118,3 +118,4 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 APIKEY
+Mapbox.framework
