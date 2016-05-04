@@ -14,6 +14,4 @@ FOUNDATION_EXPORT double OSMapboxAdapterVersionNumber;
 //! Project version string for OSMapboxAdapter.
 FOUNDATION_EXPORT const unsigned char OSMapboxAdapterVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <OSMapboxAdapter/PublicHeader.h>
-
-
+#import "OSMapboxAdapter-Swift.h"

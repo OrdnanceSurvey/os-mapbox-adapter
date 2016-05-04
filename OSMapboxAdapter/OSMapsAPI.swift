@@ -11,6 +11,7 @@ import Foundation
 import OSMapProducts
 
 /// Class used to construct stylesheets to be used with Mapbox
+@objc(OSMapsAPI)
 public class OSMapsAPI: NSObject {
     /// The API key to use with the API
     static var apiKey: String?
