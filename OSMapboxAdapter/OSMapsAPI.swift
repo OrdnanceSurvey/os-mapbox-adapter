@@ -16,6 +16,13 @@ public class OSMapsAPI: NSObject {
     static var apiKey: String?
 
     /**
+     The minimum zoom level displayable on the OS Maps API
+     */
+    public class func minimumZoomLevel() -> Double {
+        return 6.0
+    }
+
+    /**
      Set the API key to use when accessing OS Maps.
      Calling this method configures the API to be ready to use.
 

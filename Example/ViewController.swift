@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         OSMapsAPI.setAPIKey(apiKey)
         mapView.styleURL = OSMapsAPI.stylesheetURLForProduct(.Road)
         mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 50.9386, longitude: -1.4705)
+        mapView.minimumZoomLevel = OSMapsAPI.minimumZoomLevel()
         mapView.zoomLevel = 10
     }
 
