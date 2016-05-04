@@ -39,7 +39,10 @@ class OSMapsStyleProtocol: NSURLProtocol {
             "tileSize": 256,
             "tiles": [
                 "https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/\(spatial)/\(product)/{z}/{x}/{y}.png?key=\(apiKey)"
-            ]
+            ],
+            "minzoom": 7, // Values from OS Maps GetCapabilities
+            "maxzoom": 20,
+            "bounds": [ 49.766133, -7.692537, 61.464083, 3.633984 ]
         ]
     }
 
