@@ -10,6 +10,7 @@ import Foundation
 import OSMapProducts
 
 /// URL protocol used to return stylesheets that can be used with Mapbox
+@objc(OSMapsStyleProtocol)
 class OSMapsStyleProtocol: NSURLProtocol {
 
     override class func canInitWithRequest(request: NSURLRequest) -> Bool {
