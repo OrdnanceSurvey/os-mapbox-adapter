@@ -69,6 +69,13 @@ class OSMapsStyleProtocol: NSURLProtocol {
             NSStringFromOSBaseMapStyle(product): tileSourceForProduct(product)
         ]
         style["layers"] = [
+            [
+                "id": "background",
+                "type": "background",
+                "paint": [
+                    "background-color": "#eee"
+                ]
+            ],
             layerForProduct(product)
         ]
 

@@ -75,12 +75,16 @@ class OSMapsStyleProtocolTests: XCTestCase {
             fail("No layers found")
             return
         }
-        expect(layers).to(haveCount(1))
-        let layer = layers.first!
+        expect(layers).to(haveCount(2))
+        let layer = layers.last!
         checkValue(layer, key: "id", expected: expectedName)
         checkValue(layer, key: "type", expected: "raster")
         checkValue(layer, key: "source", expected: expectedName)
         checkValue(layer, key: "paint", expected: ["raster-fade-duration": 100])
+        let background = layers.first!
+        checkValue(background, key: "id", expected: "background")
+        checkValue(background, key: "type", expected: "background")
+        checkValue(background, key: "paint", expected: ["background-color": "#eee"])
     }
 
     func testItIsPossibleToFetchAStylesheetForTheRoadStack() {
